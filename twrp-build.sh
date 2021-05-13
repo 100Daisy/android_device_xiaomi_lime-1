@@ -14,7 +14,7 @@ repo sync  -f --force-sync --no-clone-bundle --no-tags -j$(nproc --all)
 
 # Clone device tree and common tree
 git clone --depth=1 https://github.com/100Daisy/android_device_motorola_guamp -b android-10 device/motorola/guamp
-git clone https://github.com/100Daisy/android_kernel_motorola_guamp -b android/motorola/guamp-LA.UM.9.15.r1-01400-KAMORTA.0 kernel/motorola/guamp
+git clone https://github.com/100Daisy/android_kernel_motorola_guamp kernel/motorola/guamp
 
 # Build recovery image
 export ALLOW_MISSING_DEPENDENCIES=true; . build/envsetup.sh; lunch omni_guamp-eng; make -j$(nproc --all) recoveryimage
